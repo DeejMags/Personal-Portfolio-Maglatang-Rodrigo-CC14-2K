@@ -8,67 +8,98 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Poor+Story&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Oswald', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+      position: relative;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 2%;
+      max-width: 50px;
+      border-radius: 10px;
+      margin: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.1);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 1em;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1px;
+      background-color: #333;
+      color: #fff;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    .achievements,
+    .bio,
+    .hobbies,
+    .resume {
+      font-family: 'Oswald', sans-serif;
+      color: #333;
+      text-align: justify;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px;
+    }
+
+    .card {
+      width: 200px;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.1);
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+  </style>
   <title>Rodsman Website</title>
 </head>
-<style>
-    body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-header {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1em;
-  position: relative;
-  font-family: 'Poor Story', system-ui;
-}
-
-.logo {
-  position: absolute;
-  top: 20px;
-  left: 2%;
-  max-width: 50px;
-  border-radius: 10px;
-  margin: auto;
-  transition: transform 0.3s ease;
-}
-.logo:hover{
-  transform: scale(1.1);
-}
-nav {
-  display: flex;
-  justify-content: center;
-  margin-top: 1em;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 15px;
-  font-size: 18px;
-  font-family: 'Poor Story', system-ui;
-}
-footer {
-  text-align: center;
-  padding: 1px;
-  background-color: #333;
-  color: #fff;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  font-family: 'Poor Story', system-ui;
-}
-.name,.achievements,.bio,.hobbies,.resume{
-  font-family: 'Poor Story', 'system-ui';
-  color: #333;
-  text-align: justify;
-}
-</style>
 
 <body>
 
@@ -83,6 +114,21 @@ footer {
   </header>
 
   <section>
+    <div class="card-container">
+      <div class="card">
+        <img src="your-image1.jpg" alt="Image 1">
+        <p>Card 1 description</p>
+      </div>
+      <div class="card">
+        <img src="your-image2.jpg" alt="Image 2">
+        <p>Card 2 description</p>
+      </div>
+      <div class="card">
+        <img src="your-image3.jpg" alt="Image 3">
+        <p>Card 3 description</p>
+      </div>
+    </div>
+
     <div class="bio">
       <h2>Bio</h2>
       <p>I am from Tarlac City.</p>
@@ -90,15 +136,8 @@ footer {
 
     <div class="achievements">
       <h2>Achievements</h2>
-      <ul>
-        <li>Graduated from University of the Cordilleras</li>
-        <li>Found a nice job</li>
-      </ul>
-    </div>
-
-    <div class="name">
-      <h2>Name</h2>
-      <p>Maglatang, Rodrigo N.</p>
+      <p>Graduated from University of the Cordilleras</p>
+      <p>Finding a new home</p>
     </div>
 
     <div class="hobbies">
