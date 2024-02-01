@@ -10,65 +10,89 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
   <title>Rodsman Website</title>
-</head>
-<style>
+  <style>
     body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
 
-header {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1em;
-  position: relative;
-  font-family: 'Poor Story', system-ui;
-}
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+      position: relative;
+      font-family: 'Poor Story', system-ui;
+    }
 
-.logo {
-  position: absolute;
-  top: 20px;
-  left: 2%;
-  max-width: 50px;
-  border-radius: 10px;
-  margin: auto;
-  transition: transform 0.3s ease;
-}
-.logo:hover{
-  transform: scale(1.1);
-}
-nav {
-  display: flex;
-  justify-content: center;
-  margin-top: 1em;
-}
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 2%;
+      max-width: 50px;
+      border-radius: 10px;
+      margin: auto;
+      transition: transform 0.3s ease;
+    }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 15px;
-  font-size: 18px;
-  font-family: 'Poor Story', system-ui;
-}
-footer {
-  text-align: center;
-  padding: 1em;
-  background-color: #333;
-  color: #fff;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  font-family: 'Poor Story', system-ui;
-}
-.name,.achievements,.bio,.hobbies,.resume{
-  font-family: 'Poor Story', 'system-ui';
-  color: #333;
-  text-align: justify;
-}
-</style>
+    .logo:hover {
+      transform: scale(1.1);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 1em;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      font-family: 'Poor Story', system-ui;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      background-color: #333;
+      color: #fff;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      font-family: 'Poor Story', system-ui;
+    }
+
+    .name,
+    .achievements,
+    .bio,
+    .hobbies,
+    .resume {
+      font-family: 'Poor Story', 'system-ui';
+      color: #333;
+      text-align: justify;
+    }
+
+    .resume-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    .picture {
+      max-width: 200px;
+    }
+
+    .profile-picture {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
 
 <body>
 
@@ -80,39 +104,46 @@ footer {
       <a href="projects.html">Projects</a>
     </nav>
   </header>
+
   <section>
-    <div class="resume">
-      <h1>Resume</h1>
-      <div class="name">
-        <h2>Rodrigo N. Maglatang Jr.</h2>
+    <div class="resume-container">
+      <div class="resume">
+        <h1>Resume</h1>
+        <div class="name">
+          <h2>Rodrigo N. Maglatang Jr.</h2>
+        </div>
+        <div class="bio">
+          <h3>Personal Information</h3>
+          <p>Date of Birth: February 13, 2003</p>
+          <p>Email: rmaglatangjr@gmail.com</p>
+          <p>Phone: (+63) 969 190 4630</p>
+          <p>Address: Tarlac City, Philippines</p>
+        </div>
+        <div class="achievements">
+          <h3>Education</h3>
+          <p><strong>University of the Cordilleras</strong> - Bachelor of Science in Computer Science (Unknown)</p>
+          <p><strong>Great Eastern Institute</strong> - Graduated Grade 10 and 12-STEM A</p>
+        </div>
+        <div class="projects">
+          <h3>Work Experience</h3>
+          <p><strong>N/A</strong> - N/A</p>
+          <ul>
+            <li>N/A</li>
+            <li>N/A</li>
+          </ul>
+        </div>
+        <div class="hobbies">
+          <h3>Skills</h3>
+          <ul>
+            <li>Programming Languages: HTML, CSS, JavaScript</li>
+            <li>Frameworks: React, Node.js</li>
+            <li>Other Skills: Team Collaboration</li>
+          </ul>
+        </div>
       </div>
-      <div class="bio">
-        <h3>Personal Information</h3>
-        <p>Date of Birth: February 13, 2003</p>
-        <p>Email: rmaglatangjr@gmail.com</p>
-        <p>Phone: (+63) 969 190 4630</p>
-        <p>Address: Tarlac City, Philippines</p>
-      </div>
-      <div class="achievements">
-        <h3>Education</h3>
-        <p><strong>University of the Cordilleras</strong> - Bachelor of Science in Computer Science (Unknown)</p>
-        <p><strong>Great Eastern Institute</strong> - Graduated Gradde 10 and 12-STEM A</p>
-      </div>
-      <div class="projects">
-        <h3>Work Experience</h3>
-        <p><strong>N/A</strong> - N/A</p>
-        <ul>
-          <li>N/A</li>
-          <li>N/A</li>
-        </ul>
-      </div>
-      <div class="hobbies">
-        <h3>Skills</h3>
-        <ul>
-          <li>Programming Languages: HTML, CSS, JavaScript</li>
-          <li>Frameworks: React, Node.js</li>
-          <li>Other Skills:Team Collaboration</li>
-        </ul>
+
+      <div class="picture">
+        <img src="240771781_262824102336007_8337998493969138972_n__1_-removebg-preview.png" alt="Your Profile Picture" class="profile-picture">
       </div>
     </div>
   </section>
