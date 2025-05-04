@@ -2,13 +2,15 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="logo" href="494576828_1617918638916969_8075688224487547532_n.png">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Poor+Story&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="logo" href="494576828_1617918638916969_8075688224487547532_n.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Poor+Story&display=swap" rel="stylesheet" />
+  <title>Projects</title>
+
   <style>
     body {
       font-family: 'Oswald', sans-serif;
@@ -22,8 +24,7 @@
       color: #fff;
       text-align: center;
       padding: 1em;
-      position: relative;
-      font-family: 'Oswald', sans-serif;
+      animation: fadeInDown 1s ease;
     }
 
     nav {
@@ -37,7 +38,11 @@
       text-decoration: none;
       margin: 0 15px;
       font-size: 18px;
-      font-family: 'Oswald', sans-serif;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #1abc9c;
     }
 
     section {
@@ -45,6 +50,7 @@
       flex-wrap: wrap;
       justify-content: space-around;
       padding: 20px;
+      animation: fadeInUp 1s ease;
     }
 
     .project {
@@ -60,19 +66,19 @@
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       color: #333;
-      font-family: 'Oswald', sans-serif;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: slideIn 1s ease;
     }
 
     .project:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }
 
     .project h3 {
       color: #333;
-      font-family: 'Oswald', sans-serif;
       margin-bottom: 10px;
+      text-align: center;
     }
 
     .project p {
@@ -88,6 +94,13 @@
       height: auto;
       max-height: 200px;
       border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .mobile:hover,
+    .ai:hover,
+    .website:hover {
+      transform: scale(1.03);
     }
 
     footer {
@@ -98,16 +111,48 @@
       position: fixed;
       bottom: 0;
       width: 100%;
-      font-family: 'Oswald', sans-serif;
+      animation: fadeInUp 1s ease;
+    }
+
+    /* === Animations === */
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
   </style>
-  <title>Projects</title>
 </head>
 
 <body>
 
   <header>
-
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -117,22 +162,22 @@
   <section>
     <div class="project">
       <h3>Project 1</h3>
-      <img src="apple-applications-apps-607812.jpg" alt="mobileapp" class="mobile">
+      <img src="apple-applications-apps-607812.jpg" alt="mobileapp" class="mobile" />
       <p>Mobile Application</p>
       <p></p>
     </div>
 
     <div class="project">
       <h3>Project 2</h3>
-      <img src="https://static.vecteezy.com/system/resources/previews/015/665/684/non_2x/man-with-the-inscription-admin-icon-outline-style-vector.jpg" alt="ai" class="ai">
+      <img src="https://static.vecteezy.com/system/resources/previews/015/665/684/non_2x/man-with-the-inscription-admin-icon-outline-style-vector.jpg" alt="ai" class="ai" />
       <p>Admin Gadget Store</p>
       <p>Where the admin can add, edit, and delete products</p>
     </div>
 
     <div class="project">
       <h3>Project 3</h3>
-      <img src="https://www.euroschoolindia.com/blogs/wp-content/uploads/2023/07/importance-of-history-scaled-1.jpg" alt="website" class="website">
-      <p>History of the indigenous people SOCSCI</p>
+      <img src="https://www.euroschoolindia.com/blogs/wp-content/uploads/2023/07/importance-of-history-scaled-1.jpg" alt="website" class="website" />
+      <p>History of the Indigenous People (SOCSCI)</p>
       <p>Website for the history of the indigenous people</p>
     </div>
   </section>

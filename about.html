@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="logo" href="494576828_1617918638916969_8075688224487547532_n.png">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Poor+Story&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="logo" href="494576828_1617918638916969_8075688224487547532_n.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Poor+Story&display=swap" rel="stylesheet" />
+  <title>About</title>
   <style>
     body {
       font-family: 'Oswald', sans-serif;
@@ -23,7 +24,7 @@
       text-align: center;
       padding: 1em;
       position: relative;
-      font-family: 'Oswald', sans-serif;
+      animation: fadeInDown 1s ease;
     }
 
     nav {
@@ -37,7 +38,11 @@
       text-decoration: none;
       margin: 0 15px;
       font-size: 18px;
-      font-family: 'Oswald', sans-serif;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #1abc9c;
     }
 
     footer {
@@ -49,21 +54,15 @@
       bottom: 0;
       width: 100%;
       font-family: 'Oswald', sans-serif;
-    }
-
-    .achievements,
-    .bio,
-    .hobbies,
-    .resume {
-      font-family: 'Oswald', sans-serif;
-      color: #333;
-      text-align: justify;
+      animation: fadeInUp 1s ease;
     }
 
     .card-container {
       display: flex;
       justify-content: space-around;
+      flex-wrap: wrap;
       margin: 20px;
+      animation: slideIn 1s ease;
     }
 
     .card {
@@ -73,6 +72,8 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
       transition: transform 0.3s ease;
+      background-color: #fff;
+      margin: 10px;
     }
 
     .card:hover {
@@ -82,15 +83,63 @@
     .card img {
       max-width: 100%;
       border-radius: 8px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .bio,
+    .achievements{
+      font-family: 'Oswald', sans-serif;
+      color: #333;
+      text-align: justify;
+      margin: 20px;
+      animation: fadeInUp 1s ease;
+    }
+
+    h2 {
+      color: #222;
+    }
+
+    /* === Animations === */
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
   </style>
-  <title>About</title>
 </head>
 
 <body>
 
   <header>
-      <nav>
+    <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="resume.html">Resume</a>
@@ -101,19 +150,19 @@
   <section>
     <div class="card-container">
       <div class="card">
-        <img src="eb_1.webp" alt="Guitar">
+        <img src="eb_1.webp" alt="Guitar" />
         <p>Playing Guitar</p>
       </div>
       <div class="card">
-        <img src="jeshoots-com-250229-unsplash.jpg" alt="Playing Games">
-        <p>Playing games</p>
+        <img src="jeshoots-com-250229-unsplash.jpg" alt="Playing Games" />
+        <p>Playing Games</p>
       </div>
       <div class="card">
-        <img src="spider man wallpaper ps4.jpg" alt="Spider Man">
-        <p>Favorite superhero Spider Man</p>
+        <img src="spider man wallpaper ps4.jpg" alt="Spider Man" />
+        <p>Favorite Superhero: Spider Man</p>
       </div>
       <div class="card">
-        <img src="vegetables-cooking-food-banner-size.jpg" alt="Cooking">
+        <img src="vegetables-cooking-food-banner-size.jpg" alt="Cooking" />
         <p>Cooking Food</p>
       </div>
     </div>
@@ -129,10 +178,6 @@
       <p>Finding a new home</p>
     </div>
 
-    <div class="hobbies">
-      <h2>Hobbies</h2>
-      <p>Photography <br>Playing Mobile Games and some PC Games <br>Playing my Guitar <br>Cooking food</p>
-    </div>
   </section>
 
   <footer>
