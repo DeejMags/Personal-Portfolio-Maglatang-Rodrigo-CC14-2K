@@ -4,13 +4,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" type="logo" href="494576828_1617918638916969_8075688224487547532_n.png" />
+  <link rel="shortcut icon" type="image/png" href="494576828_1617918638916969_8075688224487547532_n.png" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Poor+Story&display=swap" rel="stylesheet" />
   <title>About</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Oswald', sans-serif;
       margin: 0;
@@ -71,7 +75,7 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease-in-out;
       background-color: #fff;
       margin: 10px;
     }
@@ -88,16 +92,56 @@
     }
 
     .bio,
-    .achievements{
+    .achievements {
       font-family: 'Oswald', sans-serif;
       color: #333;
       text-align: justify;
       margin: 20px;
       animation: fadeInUp 1s ease;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .bio:hover,
+    .achievements:hover {
+      transform: scale(1.03);
     }
 
     h2 {
       color: #222;
+    }
+
+    .profile-picture {
+      width: 200px;
+      height: 200px;
+      border-radius: 25%;
+      object-fit: cover;
+      display: flex;
+      margin: 0 auto 20px auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .profile-picture:hover {
+      transform: scale(1.03);
+    }
+
+    .member {
+      text-align: center;
+      margin: 30px auto;
+      animation: fadeInUp 1s ease;
+    }
+
+    .member img {
+      width: 200px;
+      height: 200px;
+      border-radius: 25%;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .member img:hover {
+      transform: scale(1.05);
     }
 
     /* === Animations === */
@@ -142,7 +186,6 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="resume.html">Resume</a>
       <a href="projects.html">Projects</a>
     </nav>
   </header>
@@ -168,21 +211,28 @@
     </div>
 
     <div class="bio">
-      <h2>Bio</h2>
-      <p>I am from Tarlac City.</p>
+      <img src="240771781_262824102336007_8337998493969138972_n__1_-removebg-preview.png" alt="profile" class="profile-picture" />
+      <h2>About Myself</h2>
+      <p>I am from Tarlac City. <br>
+        But I was originally born in Chuuk FSM. <br>
+        I am still practicing to code and learn new things in programming languages like Android Studio and others, but mostly Android Studio. <br>
+        I am a slow learner but I am catching up to be a better version of myself. <br>
+        I can edit videos and I use CapCut as my video editing app.
+      </p>
     </div>
 
     <div class="achievements">
       <h2>Achievements</h2>
-      <p>Graduated from University of the Cordilleras</p>
-      <p>Finding a new home</p>
+      <p>Graduated from University of the Cordilleras. <br>
+        Finding a new home somewhere outside the Philippines.</p>
     </div>
 
+    <div class="member">
+      <img src="494576828_1617918638916969_8075688224487547532_n.png" alt="Member" />
+      <h3>Member of EnviroWealth</h3>
+      <p>I am a member of the group as a Developer.</p>
+    </div>
   </section>
-
-  <footer>
-    &copy; 2025 University of the Cordilleras
-  </footer>
 
 </body>
 
